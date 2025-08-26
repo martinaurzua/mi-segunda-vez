@@ -11,7 +11,7 @@ function setup() {
     noStroke();
 }
 function draw() {
-    background(230, 230, 250);
+    background(216, 191, 216);
     orbitControl();
     pointLight(255, 255, 255, valor / 3, valor / 2, 50);
     specularMaterial(255);
@@ -24,3 +24,4 @@ function draw() {
 function windowResized() {
     resizeCanvas(valor, valor);
 }
+
