@@ -1,72 +1,94 @@
 html,
- body {
-     font-family: "Nunito", monospace;
-     color: darkmagenta;
-     margin: 0;
-     padding: 0;
-     background: thistle;
- }
+body {
+    font-family: "Nunito", monospace;
+    color: darkmagenta;
+    margin: 0;
+    padding: 0;
+    background: thistle;
+}
 
- h1 {
-     text-wrap: balance;
- }
+h1 {
+    text-wrap: balance;
+}
 
- canvas {
-     display: block;
-     text-align: center;
- }
+canvas {
+    display: block;
+    text-align: center;
+}
 
- main {
-     position: fixed;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     width: min(90vw, 900px);
-     background: rgba(255, 255, 255, 0.3);
-     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-     border-radius: 10px;
- }
+main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 900px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
 
- main > div {
-     width: 46%;
-     margin: 2%;
-     float: left;
- }
+main > div {
+    width: 46%;
+    margin: 2%;
+    float: left;
+}
 
- @media (orientation: portrait) {
-     main > div {
-         width: 96%;
-         margin: 2%;
-         float: none;
-     }
- }
+@media (orientation: portrait) {
+    main > div {
+        width: 96%;
+        margin: 2%;
+        float: none;
+    }
+}
 
- canvas {
-     border-radius: 10px;
- }
+canvas {
+    border-radius: 10px;
+}
 
- span {
-     text-decoration: underline;
- }
- ol {
-     margin: 0;
-     padding: 0;
- }
+span {
+    text-decoration: underline;
+}
+ol {
+    margin: 0;
+    padding: 0;
+}
 
- li {
-     list-style: none;
-     line-height: 2rem;
-     border-bottom: 2px solid darkmagenta;
-     display: flex;
-     padding: 0.3rem 0;
- }
+li {
+    list-style: none;
+    line-height: 2rem;
+    border-bottom: 2px solid darkmagenta;
+    display: flex;
+    padding: 0.5rem 0;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+li:hover {
+    background-color: rgba(139, 0, 139, 0.1);
+}
 
- li img {
-     border-radius: 50% 50%;
-     width: 2rem;
-     height: 2rem;
-     margin-right: 1rem;
- }
+li img {
+    border-radius: 50% 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    object-fit: cover;
+    border: 2px solid #9370db;
+    transition: transform 0.2s;
+}
+li:hover img {
+    transform: scale(1.1);
+}
+a {
+    color: darkmagenta;
+    text-decoration: none;
+    font-weight: 450;
+    transition: color 0.2s;
+    display: block;
+    padding: 2px 0;
+}
 
-
-
+a:hover {
+    color: #6a0080;
+    text-decoration: underline;
+}
