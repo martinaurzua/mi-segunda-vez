@@ -5,33 +5,37 @@ body {
     margin: 0;
     padding: 0;
     background: thistle;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
 h1 {
     text-wrap: balance;
 }
 
 canvas {
     display: block;
-    text-align: center;
+    width: 100%;
+    border-radius: 10px;
 }
 
 main {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(90vw, 900px);
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: min(90vw, 800px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 main > div {
-    width: 46%;
-    margin: 2%;
-    float: left;
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
 }
 
 @media (orientation: portrait) {
@@ -46,6 +50,12 @@ canvas {
     border-radius: 10px;
 }
 
+#pecinco {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 300px;
+}
 span {
     text-decoration: underline;
 }
